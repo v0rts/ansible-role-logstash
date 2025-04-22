@@ -1,6 +1,6 @@
 # Ansible Role: Logstash
 
-[![CI](https://github.com/geerlingguy/ansible-role-logstash/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-logstash/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-logstash/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-logstash/actions/workflows/ci.yml)
 
 An Ansible Role that installs Logstash on RedHat/CentOS Debian/Ubuntu.
 
@@ -57,6 +57,10 @@ Set this to `false` if you don't want logstash to run on system startup.
       - logstash-filter-multiline
 
 A list of Logstash plugins that should be installed.
+
+    logstash_setup_default_config: true
+
+Set this to `false` if you don't want to add the default config files shipped with this role (inside the `files/filters` directory). You can add your own configuration files inside `/etc/logstash/conf.d`.
 
 ## Generating a Self-signed certificate
 
